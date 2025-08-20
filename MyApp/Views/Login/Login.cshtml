@@ -1,0 +1,69 @@
+﻿
+<link href="~/css/login.css" rel="stylesheet" />
+<form class="form mx-auto mt-2">
+    <p class="title">Register </p>
+    <p class="message">Signup now and get full access to our app. </p>
+    <div class="flex">
+        <label>
+            <input required="" placeholder="" type="text" class="input" maxlength="30" id="FirstName">
+            <span>Firstname</span>
+        </label>
+
+        <label>
+            <input required="" placeholder="" type="text" class="input" maxlength="30" id="LastName">
+            <span>Lastname</span>
+        </label>
+    </div>
+
+    <label>
+        <input required="" placeholder="" type="email" class="input" maxlength="30" id="Email">
+        <span>Email</span>
+    </label>
+
+    <label>
+        <input required="" placeholder="" type="password" class="input" maxlength="8" id="Password">
+        <span>Password</span>
+    </label>
+
+   
+    <button class="submit" type="button" onclick="AddToDB()">Submit</button>
+    <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+</form>
+
+<script>
+
+   
+    async function AddToDB() {
+        let user = {
+            FirstName: document.getElementById('FirstName').value,
+            LastName: document.getElementById('LastName').value,
+            Email: document.getElementById('Email').value,
+            Password: document.getElementById('Password').value,
+        };
+
+        try {
+            const response = await fetch('/Login/AddToLoginDB', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(user)
+            });
+
+            if (response.ok) {
+                alert("Registration successful!");
+                 window.location.href = "/Product/Product";
+            } else {
+                const error = await response.text();
+                console.error("Server error:", error);
+                alert("Something went wrong!");
+            }
+        } catch (ex) {
+            console.error("Fetch error:", ex);
+            alert("Unable to connect to the server.");
+        }
+    }
+
+
+  
+</script>

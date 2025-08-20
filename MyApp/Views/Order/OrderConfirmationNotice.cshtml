@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Order ";
+}
+<script src="https://unpkg.com/@@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<div class="mx-auto text-center">
+    <div id="emptyCartContainer">
+        <div class="flex justify-center my-10">
+            <lottie-player src="/assets/OrderConfirmed.json"
+                           background="transparent"
+                           speed="1"
+                           style="width: 300px; height: 300px;"
+                           loop
+                           autoplay>
+            </lottie-player>
+        </div>
+    </div>
+    <h2 class="text-2xl font-semibold mt-6 text-green-600">Your order has been confirmed!</h2>
+    <p class="mt-2 text-gray-600">A confirmation email has been sent to your inbox.</p>
+</div>

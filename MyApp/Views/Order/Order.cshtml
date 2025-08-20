@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Order Confirmed";
+}
+
+
+<h2>Waiting for Order Confirmation</h2>
+<p>Please check your email and confirm the order. This page will update automatically once confirmed.</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+<script>
+    const orderId = @Model;
+
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/orderHub")
+        .build();
+
+    connection.start().then(() => {
+        console.log("Connected to SignalR hub");
+    });
+    connection.on("OrderConfirmed", function (confirmedOrderId) {
+    debugger;
+        if (confirmedOrderId === orderId) {
+            SaveCartToDB();
+            window.location.href = "/Order/OrderConfirmed";
+        }
+    });
+
+
+        async function SaveCartToDB() {
+
+        let UserData = {
+            ItemCount: document.getElementById('ItemCount').textContent,
+            Tax: document.getElementById('Tax').textContent,
+            TotalPrice: document.getElementById('TotalPrice').textContent,
+            Discount: document.getElementById('Discount').textContent,
+            DeliveryCharges: document.getElementById('DeliveryCharges').textContent,
+            Mapping: CountProductQty(),
+            ItemsSelectedJson: null,
+            ItemsSelected: null,
+        }
+
+
+        try {
+            const response = await fetch('/Cart/AddToCartDB', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(UserData)
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(errorText);
+            }
+
+            const data = await response.json();
+            alert(data.message || 'Cart updated successfully');
+        } catch (error) {
+            alert('Failed to apply cart changes: ' + error.message);
+        }
+    }
+</script> 

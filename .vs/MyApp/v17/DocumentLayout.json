@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MyApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45AD3C9A-DD38-4E6D-BA1E-D4BB30193690}|MyApp\\MyApp.csproj|d:\\myapp\\myapp\\views\\order\\orderconfirmationnotice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45AD3C9A-DD38-4E6D-BA1E-D4BB30193690}|MyApp\\MyApp.csproj|solutionrelative:myapp\\views\\order\\orderconfirmationnotice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45AD3C9A-DD38-4E6D-BA1E-D4BB30193690}|MyApp\\MyApp.csproj|d:\\myapp\\myapp\\wwwroot\\js\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{45AD3C9A-DD38-4E6D-BA1E-D4BB30193690}|MyApp\\MyApp.csproj|solutionrelative:myapp\\wwwroot\\js\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45AD3C9A-DD38-4E6D-BA1E-D4BB30193690}|MyApp\\MyApp.csproj|d:\\myapp\\myapp\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45AD3C9A-DD38-4E6D-BA1E-D4BB30193690}|MyApp\\MyApp.csproj|solutionrelative:myapp\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45AD3C9A-DD38-4E6D-BA1E-D4BB30193690}|MyApp\\MyApp.csproj|d:\\myapp\\myapp\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45AD3C9A-DD38-4E6D-BA1E-D4BB30193690}|MyApp\\MyApp.csproj|solutionrelative:myapp\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45AD3C9A-DD38-4E6D-BA1E-D4BB30193690}|MyApp\\MyApp.csproj|d:\\myapp\\myapp\\views\\order\\order.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45AD3C9A-DD38-4E6D-BA1E-D4BB30193690}|MyApp\\MyApp.csproj|solutionrelative:myapp\\views\\order\\order.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cart.cshtml",
+              "DocumentMoniker": "D:\\MyApp\\MyApp\\Views\\Cart\\Cart.cshtml",
+              "RelativeDocumentMoniker": "MyApp\\Views\\Cart\\Cart.cshtml",
+              "ToolTip": "D:\\MyApp\\MyApp\\Views\\Cart\\Cart.cshtml",
+              "RelativeToolTip": "MyApp\\Views\\Cart\\Cart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T17:27:55.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cart.js",
+              "DocumentMoniker": "D:\\MyApp\\MyApp\\wwwroot\\js\\Cart.js",
+              "RelativeDocumentMoniker": "MyApp\\wwwroot\\js\\Cart.js",
+              "ToolTip": "D:\\MyApp\\MyApp\\wwwroot\\js\\Cart.js",
+              "RelativeToolTip": "MyApp\\wwwroot\\js\\Cart.js",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAYwKAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-03T16:46:43.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderConfirmationNotice.cshtml",
+              "DocumentMoniker": "D:\\MyApp\\MyApp\\Views\\Order\\OrderConfirmationNotice.cshtml",
+              "RelativeDocumentMoniker": "MyApp\\Views\\Order\\OrderConfirmationNotice.cshtml",
+              "ToolTip": "D:\\MyApp\\MyApp\\Views\\Order\\OrderConfirmationNotice.cshtml",
+              "RelativeToolTip": "MyApp\\Views\\Order\\OrderConfirmationNotice.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T15:13:06.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "D:\\MyApp\\MyApp\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "MyApp\\Controllers\\OrderController.cs",
+              "ToolTip": "D:\\MyApp\\MyApp\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "MyApp\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAWwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T13:25:34.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Order.cshtml",
+              "DocumentMoniker": "D:\\MyApp\\MyApp\\Views\\Order\\Order.cshtml",
+              "RelativeDocumentMoniker": "MyApp\\Views\\Order\\Order.cshtml",
+              "ToolTip": "D:\\MyApp\\MyApp\\Views\\Order\\Order.cshtml",
+              "RelativeToolTip": "MyApp\\Views\\Order\\Order.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-03T11:09:08.857Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

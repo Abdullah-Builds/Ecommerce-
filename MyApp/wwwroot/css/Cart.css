@@ -1,0 +1,417 @@
+﻿a.cart-button {
+    background: linear-gradient(135deg, #2962ff, #1565c0);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform: translateZ(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+    a.cart-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: 0.5s;
+    }
+
+    a.cart-button:hover::before {
+        left: 100%;
+    }
+
+    a.cart-button:hover {
+        transform: translateZ(10px) scale(1.02);
+        background: linear-gradient(135deg, #3d7fff, #1976d2);
+        box-shadow: 0 8px 25px rgba(41, 98, 255, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 0 20px rgba(41, 98, 255, 0.2), 0 0 0 4px rgba(41, 98, 255, 0.1);
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: 1px;
+    }
+
+    a.cart-button:active {
+        transform: translateY(2px) translateZ(-5px);
+        box-shadow: 0 4px 15px rgba(41, 98, 255, 0.2);
+    }
+
+    a.cart-button::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        pointer-events: none;
+    }
+
+.cart-icon {
+    display: inline-block;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+    transform: translateZ(5px);
+}
+
+    .cart-icon svg {
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+    }
+
+a.cart-button:hover .cart-icon svg {
+    transform: scale(1.1);
+}
+
+@keyframes addedToCart {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4) rotate(45deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.8);
+    width: 0;
+    transform: translateZ(2px);
+}
+
+.adding {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+    .adding .progress-bar {
+        animation: progress 1s ease-in-out;
+    }
+
+.success .cart-icon {
+    animation: addedToCart 0.5s ease-in-out;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+@keyframes checkmark {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.success-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.success .success-icon {
+    display: block !important;
+    animation: checkmark 0.5s ease-in-out forwards;
+}
+
+@keyframes subtle-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(41, 98, 255, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(41, 98, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(41, 98, 255, 0);
+    }
+}
+
+a.cart-button {
+    animation: subtle-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.success {
+    background: linear-gradient(135deg, #00c853, #009624) !important;
+    transform: translateZ(5px);
+    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a.cart-button {
+        transition: none;
+    }
+
+        a.cart-button:hover,
+        a.cart-button:active {
+            animation: none;
+            transform: none;
+        }
+}
+
+@media (hover: hover) {
+    a.cart-button:hover {
+        transform: translateZ(10px) rotateX(2deg) rotateY(2deg) scale(1.02);
+        box-shadow: 0 4px 15px rgba(41, 98, 255, 0.4), 0 0 20px rgba(41, 98, 255, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+}
+
+
+
+/* From Uiverse.io by xerith_8140 */
+/* Notification container */
+
+.notification-container {
+    /* Position top left */
+    /* position: fixed;
+      top: 2%;
+      left: 2%;
+      z-index: 1000;
+      max-width: 80%; */
+
+    --content-color: black;
+    --background-color: #f3f3f3;
+    --font-size-content: 0.75em;
+    --icon-size: 1em;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style-type: none;
+    font-family: sans-serif;
+    color: var(--content-color);
+}
+
+/* Notification Item */
+
+.notification-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 1em;
+    overflow: hidden;
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: rgba(111, 111, 111, 0.2) 0px 8px 24px;
+    background-color: var(--background-color);
+    transition: all 250ms ease;
+    /* Background Pattern */
+
+    --grid-color: rgba(225, 225, 225, 0.7);
+    background-image: linear-gradient( 0deg, transparent 23%, var(--grid-color) 24%, var(--grid-color) 25%, transparent 26%, transparent 73%, var(--grid-color) 74%, var(--grid-color) 75%, transparent 76%, transparent ), linear-gradient( 90deg, transparent 23%, var(--grid-color) 24%, var(--grid-color) 25%, transparent 26%, transparent 73%, var(--grid-color) 74%, var(--grid-color) 75%, transparent 76%, transparent );
+    background-size: 55px 55px;
+}
+
+    .notification-item svg {
+        transition: 250ms ease;
+    }
+
+    .notification-item:hover {
+        transform: scale(1.01);
+    }
+
+    .notification-item:active {
+        transform: scale(1.05);
+    }
+
+    .notification-item .notification-close:hover {
+        background-color: rgba(204, 204, 204, 0.45);
+    }
+
+        .notification-item .notification-close:hover svg {
+            color: rgb(0, 0, 0);
+        }
+
+    .notification-item .notification-close:active svg {
+        transform: scale(1.1);
+    }
+
+    /* Notification Icons */
+
+    .notification-item .notification-close {
+        padding: 2px;
+        border-radius: 5px;
+        transition: all 250ms;
+    }
+
+.notification-container svg {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    color: var(--content-color);
+}
+
+.notification-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* Success */
+
+.success {
+    color: #047857;
+    background-color: #7dffbc;
+    --grid-color: rgba(16, 185, 129, 0.25);
+    background-image: linear-gradient( 0deg, transparent 23%, var(--grid-color) 24%, var(--grid-color) 25%, transparent 26%, transparent 73%, var(--grid-color) 74%, var(--grid-color) 75%, transparent 76%, transparent ), linear-gradient( 90deg, transparent 23%, var(--grid-color) 24%, var(--grid-color) 25%, transparent 26%, transparent 73%, var(--grid-color) 74%, var(--grid-color) 75%, transparent 76%, transparent );
+}
+
+    .success svg {
+        color: #047857;
+    }
+
+    .success .notification-progress-bar {
+        background-color: #047857;
+    }
+
+    .success:hover {
+        background-color: #5bffaa;
+    }
+
+/* Info */
+
+.info {
+    color: #1e3a8a;
+    background-color: #7eb8ff;
+    --grid-color: rgba(59, 131, 246, 0.25);
+    background-image: linear-gradient( 0deg, transparent 23%, var(--grid-color) 24%, var(--grid-color) 25%, transparent 26%, transparent 73%, var(--grid-color) 74%, var(--grid-color) 75%, transparent 76%, transparent ), linear-gradient( 90deg, transparent 23%, var(--grid-color) 24%, var(--grid-color) 25%, transparent 26%, transparent 73%, var(--grid-color) 74%, var(--grid-color) 75%, transparent 76%, transparent );
+}
+
+    .info svg {
+        color: #1e3a8a;
+    }
+
+    .info .notification-progress-bar {
+        background-color: #1e3a8a;
+    }
+
+    .info:hover {
+        background-color: #5ba5ff;
+    }
+
+/* Warning */
+
+.warning {
+    color: #78350f;
+    background-color: #ffe57e;
+    --grid-color: rgba(245, 159, 11, 0.25);
+    background-image: linear-gradient( 0deg, transparent 23%, var(--grid-color) 24%, var(--grid-color) 25%, transparent 26%, transparent 73%, var(--grid-color) 74%, var(--grid-color) 75%, transparent 76%, transparent ), linear-gradient( 90deg, transparent 23%, var(--grid-color) 24%, var(--grid-color) 25%, transparent 26%, transparent 73%, var(--grid-color) 74%, var(--grid-color) 75%, transparent 76%, transparent );
+}
+
+    .warning svg {
+        color: #78350f;
+    }
+
+    .warning .notification-progress-bar {
+        background-color: #78350f;
+    }
+
+    .warning:hover {
+        background-color: #ffde59;
+    }
+
+/* Error */
+
+.error {
+    color: #7f1d1d;
+    background-color: #ff7e7e;
+    --grid-color: rgba(239, 68, 68, 0.25);
+    background-image: linear-gradient( 0deg, transparent 23%, var(--grid-color) 24%, var(--grid-color) 25%, transparent 26%, transparent 73%, var(--grid-color) 74%, var(--grid-color) 75%, transparent 76%, transparent ), linear-gradient( 90deg, transparent 23%, var(--grid-color) 24%, var(--grid-color) 25%, transparent 26%, transparent 73%, var(--grid-color) 74%, var(--grid-color) 75%, transparent 76%, transparent );
+}
+
+    .error svg {
+        color: #7f1d1d;
+    }
+
+    .error .notification-progress-bar {
+        background-color: #7f1d1d;
+    }
+
+    .error:hover {
+        background-color: #ff5f5f;
+    }
+
+/* Notification content */
+
+.notification-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.notification-text {
+    font-size: var(--font-size-content);
+    user-select: none;
+}
+
+.notification-close {
+    cursor: pointer;
+}
+
+/* Notification progress bar */
+
+.notification-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--content-color);
+    width: 100%;
+    transform: translateX(100%);
+    /* Remove the infinite property for your website */
+
+    animation: progressBar 5s linear forwards infinite;
+}
+
+/* progressBar Animation */
+
+@keyframes progressBar {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
